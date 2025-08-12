@@ -1,0 +1,109 @@
+:root {
+  --bg: #0f172a;
+  --accent: #7c3aed;
+  --muted: #94a3b8;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  color: white;
+}
+.todo-app {
+  width: 100%;
+  max-width: 720px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 14px;
+  padding: 20px;
+}
+header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+.new-todo {
+  flex: 1;
+  display: flex;
+  gap: 8px;
+}
+.new-todo input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+.btn {
+  background: var(--accent);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn.ghost {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.02);
+}
+.item.completed .text {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+.check {
+  width: 18px;
+  height: 18px;
+  border: 2px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.actions {
+  display: flex;
+  gap: 8px;
+}
+.icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+}
+.footer {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.count {
+  font-size: 14px;
+  color: var(--muted);
+}
+.empty {
+  padding: 20px;
+  text-align: center;
+  color: var(--muted);
+}
